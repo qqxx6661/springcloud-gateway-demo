@@ -9,9 +9,6 @@ import org.springframework.stereotype.Component;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * 验证签名
- */
 @Slf4j
 @Component
 public class DemoGatewayFilterFactory extends AbstractGatewayFilterFactory<DemoGatewayFilterFactory.Config> {
@@ -35,7 +32,6 @@ public class DemoGatewayFilterFactory extends AbstractGatewayFilterFactory<DemoG
                 return chain.filter(exchange);
             }
             log.info("-----DemoGatewayFilterFactory start-----");
-
             ServerHttpRequest request = exchange.getRequest();
             log.info("RemoteAddress: [{}]", request.getRemoteAddress());
             log.info("Path: [{}]", request.getURI().getPath());

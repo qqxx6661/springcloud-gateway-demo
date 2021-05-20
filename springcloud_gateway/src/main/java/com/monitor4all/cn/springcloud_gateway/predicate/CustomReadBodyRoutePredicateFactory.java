@@ -60,7 +60,6 @@ public class CustomReadBodyRoutePredicateFactory extends AbstractRoutePredicateF
                         if (CustomReadBodyRoutePredicateFactory.log.isDebugEnabled()) {
                             CustomReadBodyRoutePredicateFactory.log.debug("Predicate test failed because class in predicate does not match the cached body object", var6);
                         }
-
                         return Mono.just(false);
                     }
                 } else {
